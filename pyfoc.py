@@ -2,16 +2,15 @@ import os
 import time
 
 class watch(object):
-    def __init__(self, file_path: str, eof: str, call_f, sleep_time: float = 0.001):
+    def __init__(self, file_path: str, separator: str, call_back, sleep_time: float = 0.001):
         self.file_path = file_path
         self.file = open(file_path,"rb")
         self.c_f = sleep_time
-        self.eof = eof
-        self.call_f = call_f
+        self.eof = separator
+        self.call_f = call_back
         self.os_st_size = 6
     def start(self):
         buff = ''
-        c = True
         s1 = os.stat(self.file_path)[self.os_st_size]
         while(True):
             time.sleep(self.c_f)
