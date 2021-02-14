@@ -1,6 +1,5 @@
 # pyfoc
-Focus on real-time file changes in log files, real-time charts, etc.
-
+Pyfoc focuses on changing files as a real-time process.
 ## Usage
 ```python
 import pyfoc
